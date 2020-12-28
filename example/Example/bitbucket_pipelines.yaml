@@ -1,0 +1,10 @@
+steps:
+  - step: &build_ios
+      name: Build iOS
+      image: todo_docker_image:latest
+      script:
+        - bash pipelines_server.sh 
+pipelines:
+  branches:
+    master:
+      - step: *build_ios    
