@@ -1,7 +1,7 @@
 steps:
   - step: &build_ios
       name: Build iOS
-      image: todo_docker_image:latest
+      image: felhr85/docker-for-ios-bitbucket-pipelines:latest
       script:
         - bash pipelines_server.sh 
 pipelines:

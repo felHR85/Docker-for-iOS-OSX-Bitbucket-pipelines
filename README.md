@@ -1,5 +1,7 @@
 # Docker for iOS/OSX Bitbucket pipelines
 
+[![dockeri.co](https://dockeri.co/image/felhr85/docker-for-ios-bitbucket-pipelines)](https://hub.docker.com/r/felhr85/docker-for-ios-bitbucket-pipelines)
+
 ## Introduction
 [Bitbucket Pipelines](https://bitbucket.org/product/en/features/pipelines) doesn't support iOS/OSX builds. This simple Docker image tries to solve this by connecting to:
 
@@ -7,7 +9,9 @@
 - Your own OSX machine with remote login. [This could be used with the multiple providers that offers Mac mini servers](https://www.datacenterknowledge.com/archives/2014/02/14/macminivault-expands-at-phoenix-nap)
 
 ## Pull Docker Image
-In progress..
+```shell
+docker pull felhr85/docker-for-ios-bitbucket-pipelines:1.0.0
+```
 
 ## What do we need to add in out project?
 The next files need to be added to the root of your Bitbucket project.
@@ -83,7 +87,7 @@ Finally we need a bitbucket_pipelines.yml
 steps:
   - step: &build_ios
       name: Build iOS
-      image: todo_docker_image:latest
+      image: felhr85/docker-for-ios-bitbucket-pipelines:latest
       script:
         - bash pipelines_aws.sh 
 pipelines:
@@ -145,7 +149,7 @@ Finally we need a bitbucket_pipelines.yml
 steps:
   - step: &build_ios
       name: Build iOS
-      image: todo_docker_image:latest
+      image: felhr85/docker-for-ios-bitbucket-pipelines:latest
       script:
         - bash pipelines_server.sh 
 pipelines:
