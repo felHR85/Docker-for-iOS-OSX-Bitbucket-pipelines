@@ -1,0 +1,15 @@
+{
+    "instance_id" : "i-017f8354e2dc69c4f",
+
+    "ip": "172.158.12.54",
+    "user": "my_user",
+    "password": "my_password",
+
+    "remote_repo": "~",
+    
+    "instance_user" : "ubuntu",
+    "ssh_port" : 22,
+    "ssh_key" : "test-key.pem",
+    "script" : "run.sh",
+    "post_script" : "post_run.sh"
+}
